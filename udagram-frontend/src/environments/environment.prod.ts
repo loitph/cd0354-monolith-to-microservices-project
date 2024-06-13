@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const url = 'http://a82d60f6be6e349d1bb76ce028c8954a-1315555347.us-east-1.elb.amazonaws.com:8080';
+const url = 'http://ae00187d532d94bdfb02ce85b182409f-846888471.us-east-1.elb.amazonaws.com:8080';
 export const environment = {
   production: false,
   appName: 'Udagram',

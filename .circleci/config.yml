@@ -17,6 +17,8 @@ jobs:
             sudo apt-get install -y nodejs
             node -v
             npm -v
+
+            echo "[ Start Docker build ]"
             docker build -t udagram-api-feed ./udagram-api-feed
             docker tag udagram-api-feed $DOCKER_USERNAME/udagram-api-feed:v1
             docker build -t udagram-api-user ./udagram-api-user
@@ -25,11 +27,18 @@ jobs:
             docker tag udagram-frontend $DOCKER_USERNAME/udagram-frontend:v1
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
             docker tag udagram-reverseproxy $DOCKER_USERNAME/udagram-reverseproxy:v1
+            echo "[ Docker build success ]"
+
+            echo "[ Start Docker login ]"
             docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+            echo "[ Docker login success ]"
+
+            echo "[ Start Docker pushing ]"
             docker push $DOCKER_USERNAME/udagram-api-feed:v1
             docker push $DOCKER_USERNAME/udagram-api-user:v1
             docker push $DOCKER_USERNAME/udagram-frontend:v1
             docker push $DOCKER_USERNAME/udagram-reverseproxy:v1
+            echo "[ Docker push success ]"
 
 workflows:
   default:

@@ -10,8 +10,6 @@ RUN npm ci
 COPY . .
 RUN ionic build
 ### Run 
-# ARG NODE_VERSION=14.15.0
-# FROM node:${NODE_VERSION}-alpine as base
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html

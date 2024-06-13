@@ -15,8 +15,6 @@ jobs:
           command: |
             curl -fsSl https://deb.nodesource.com/setup_16.x | sudo -E bash -
             sudo apt-get install -y nodejs
-            node -v
-            npm -v
 
             echo "[ Start Docker build ]"
 
@@ -46,7 +44,7 @@ jobs:
             echo "[ Docker push success ]"
 
 workflows:
-  default:
+  build-microservices:
     jobs:
       - lint-app
       - build-docker:

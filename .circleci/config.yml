@@ -12,8 +12,6 @@ jobs:
     executor: node-executor
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 26.0.0
       - run:
           name: Build udagram-api-feed image
           command: |
@@ -35,8 +33,6 @@ jobs:
     executor: node-executor
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 26.0.0
       - run:
           name: Build udagram-api-user image
           command: |
@@ -57,8 +53,6 @@ jobs:
     executor: docker-executor
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 26.0.0
       - run:
           name: Build udagram-reverseproxy image
           command: |
@@ -79,8 +73,6 @@ jobs:
     executor: node-executor
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 26.0.0
       - run:
           name: Build udagram-frontend image
           command: |

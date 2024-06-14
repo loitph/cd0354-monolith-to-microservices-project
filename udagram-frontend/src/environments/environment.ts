@@ -1,11 +1,10 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-const url = 'http://ae00187d532d94bdfb02ce85b182409f-846888471.us-east-1.elb.amazonaws.com:8080';
 export const environment = {
   production: false,
   appName: 'Udagram',
-  apiHost: `${url}/api/v0`
+  apiHost: `http://a0c17d8c81446417ebb22ad2d54acdcf-971515609.us-east-1.elb.amazonaws.com:8080/api/v0`
 };
 
 /*

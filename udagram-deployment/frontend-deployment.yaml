@@ -16,7 +16,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: loitph/udagram-frontend:v10
+      - image: loitph/udagram-frontend:v11
         name: frontend
         imagePullPolicy: Always
         ports:

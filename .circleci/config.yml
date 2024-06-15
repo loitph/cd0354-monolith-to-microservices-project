@@ -43,6 +43,7 @@ jobs:
             docker push $DOCKER_USERNAME/udagram-reverseproxy:v1
             echo "[ Docker push success ]"
 
+
 workflows:
   build-microservices:
     jobs:
